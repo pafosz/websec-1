@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    background-color: #f0f0f0;
+}
+
+.calculator-container {
+    width: 70%;
+    margin: 20px;
+}
+
+.calculator {
+    background-color: #BAFFC2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.calc-input,
+.calc-select,
+.calc-button,
+.result-field {
+    background-color: #BAFFC2;
+    border: 1px dashed #ff0000;
+    border-radius: 10px;
+    color: #ff0100;
+    font-size: 16px;
+}
+
+.calc-input {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px 15px;
+}
+
+.calc-input::placeholder {
+    color: rgba(255, 1, 0, 0.5);
+}
+
+.calc-select {
+    width: 80px;
+    padding: 8px 5px;
+    text-align: left;
+}
+
+.calc-select option {
+    background-color: #BAFFC2;
+    color: #FF0100;
+}
+
+.calc-button {
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.calc-button:hover {
+    background-color: rgba(255, 1, 0, 0.1);
+}
+
+.result-field {
+    padding: 15px;
+    min-height: 80px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.current-result {
+    color: #ff0100;    
+}
+
+.previous-result {
+    color: rgba(255, 1, 0, 0.3);   
+}
+
+.error-input {
+    border-style: solid;
+    background-color: rgba(255, 1, 0, 0.05);
+}
+
+.error-message {
+    color: #ff0100;
+    font-size: 14px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .calculator-container {
+        width: 90%;
+    }
+    
+    .calc-input {
+        min-width: 100%;
+    }
+    
+    .input-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .calc-select {
+        width: 80px;
+        max-width: 200px;
+        align-self: center;
+    }
+}
